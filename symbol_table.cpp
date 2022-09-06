@@ -63,10 +63,10 @@ public:
 	{
 		Node * cur=head[0];
 		
-		while(cur!=NULL)
+		for(int i=0 ; i<MAX ; i++)
 		{
-			cur->print();
-			cur=cur->next;
+			if(head[i]==NULL) continue;
+			head[i]->print();
 		}
 	}
 };
@@ -229,7 +229,7 @@ int main()
 		{
 			scope++;
 		}
-		else if(word=="{")
+		else if(word=="}")
 		{
 			scope--;
 		}
